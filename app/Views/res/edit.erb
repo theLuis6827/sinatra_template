@@ -1,0 +1,12 @@
+<form action="/restaurants/<%= @restaurant.id %>" method="post">
+<input type="hidden" name="_method" value='patch'>
+<label>Update Name</label>
+<br/>
+<input type="text" name="restaurant_name" value = <%= @restaurant.name %>>
+<br/>
+<label>Update Category</label>
+<br/>
+<input type="text" name="restaurant_category" value = <%= @restaurant.restaurant_category %> >
+<br/>
+<input type="submit">
+</form>

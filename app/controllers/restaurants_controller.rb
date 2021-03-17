@@ -1,4 +1,4 @@
-class RestaurantsController < Sinatra::Base
+class RestaurantsController < ApplicationController
     set :method_override, true
     set :views, "app/views/restaurants"
 

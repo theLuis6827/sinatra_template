@@ -1,0 +1,10 @@
+<h1>This is the show page for the Restaurant</h1>
+<h1> Name of Restaurant <%= @restaurant.name %>  </h1>
+<h2> Category: <%= @restaurant.restaurant_category %>  </h2>
+<hr/>
+
+<ul>
+<% @restaurant.foods.each do | food | %>
+  <li>  <%= food.name %> </li>
+<% end %>
+</ul>

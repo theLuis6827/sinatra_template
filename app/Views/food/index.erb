@@ -1,0 +1,7 @@
+<h1>This is the foods page</h1>
+
+<ul>
+<% @foods.each do | food | %>
+<li> <%= food.title %> by <%= food.restaurant.name %> </li>
+<% end %>
+</ul>

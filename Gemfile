@@ -10,3 +10,5 @@ gem 'rack'
 gem 'shotgun'
 gem 'sinatra'
 gem 'rest-client'
+
+gem "webrick", "~> 1.7"

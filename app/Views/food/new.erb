@@ -1,0 +1,16 @@
+<h1>Create a new food!</h1>
+
+<form action ="/food" method="post">
+<label> Restaurant </label>
+<select name="restaurant_id">
+<% @restaurant.each do  | restaurant | %>
+    <option value=<%= restaurant.id%> >  <%= restaurant.name%>    </option>
+<% end %>
+</select>
+<br>
+<label> Food Name </label>
+<input type= "text" name="name">
+<br>
+<input type="submit">
+
+</form>

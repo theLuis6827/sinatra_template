@@ -1,10 +1,12 @@
 class ApplicationController < Sinatra::Base
 
-    set :views, "app/views" #set base point for views
+    set :views, "app/views"
 
-    get '/' do          #get request with NO template
+    get '/' do
         "Hello World"
     end
+
+
 
  
 
