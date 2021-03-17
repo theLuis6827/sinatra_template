@@ -1,19 +1,18 @@
 class RestaurantsController < ApplicationController
     set :method_override, true
-    set :views, "app/views/restaurants"
 
     get '/restaurants' do 
         @restaurant = Restaurant.all
-        erb :index
+        erb :'res/index'
     end
 
     get '/restaurants/:id' do
         @restaurant = Restaurant.find(params[:id])
-        erb :show
+        erb :'res/show'
     end
 
     get '/create_restaurant' do
-        erb :create_resaurant
+        erb :'res/create_restaurant'
     end
 
     post '/restaurants' do
@@ -23,14 +22,14 @@ class RestaurantsController < ApplicationController
 
     get '/restaurants/:id/edit' do 
         @restaurant = Restaurant.find(params[:id])
-        erb :edit
+        erb :'res/edit'
     end
 
     patch '/restaurants/:id' do
         @restaurant = Restaurant.find(params[:id])
         @restaurant.update(name: params['restaurant_name'],  category: params['restaurant_category'])
 
-        erb :show 
+        erb :'res/show' 
     end
 
     delete '/restaurants/:id' do
